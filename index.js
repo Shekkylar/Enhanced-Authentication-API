@@ -78,7 +78,7 @@ app.post('/api/users', async (req, res) => {
         await newUser.save();
 
         // Return the newly created user
-        res.status(201).json(newUser);
+        res.status(201).json( 'User created successfully');
     } catch (error) {
         console.error('Error creating user:', error);
         res.status(500).json({ message: 'Internal server error' });
